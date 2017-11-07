@@ -1,0 +1,20 @@
+<?php
+require 'wechat.class.php';
+/*
+require 'config.php';
+$options = [
+	'token' => TOKEN,
+	'appid' => APPID,
+	'appsecret' => APPSECRET,
+	'dubug' => true,
+	];
+*/
+$options = [];
+$wechatObj = new wechat($options);
+if(isset($_GET["echostr"])){
+	$wechatObj->valid();
+}
+
+//	echo $_GET["echostr"];
+//	exit;
+?>
